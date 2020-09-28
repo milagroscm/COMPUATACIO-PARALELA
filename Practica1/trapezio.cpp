@@ -3,8 +3,6 @@
 #include <mpi.h>
 
 using namespace std;
-//mpicc main.c
-//mpiexec -n 8 ./a.out 
 
 double f(double x)
 {
