@@ -11,20 +11,20 @@ double f(double x)
     return x*x;
 }
 
-double Trap(double left_endpt, double right_endpt, int trap_count, double base_len)
+double Trap(double Dato_A, double Dato_B, int trap_count, double base_len)
 {
-    double estimate, x;
+    double approx, x;
     int i;
 
-    estimate = (f(left_endpt) + f(right_endpt)) / 2.0;
+    approx = (f(Dato_A) + f(Dato_B)) / 2.0;
     for (i = 1; i <= trap_count - 1; i++)
     {
-        x = left_endpt + i * base_len;
-        estimate += f(x);
+        x = Dato_A + i * base_len;
+        approx += f(x);
     }
-    estimate = estimate * base_len;
+    approx = approx * base_len;
 
-    return estimate;
+    return approx;
 }
 
 int main()
