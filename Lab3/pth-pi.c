@@ -62,10 +62,7 @@ void * thread_sum_mutex(void * rank){
 	for(long double i = my_first_i; i < my_last_i; i++, factor = -factor){
 		my_sum += factor/(2 * i + 1);
 	}
-    
-    while(flag != my_rank);
-	sum += my_sum;
-	flag = (flag+1) % numThreads; 
+     
 
 	pthread_mutex_lock(&mutex);
 	sum += my_sum;
